@@ -1,4 +1,6 @@
 <script setup>
+import LangSelect from './LangSelect.vue';
+
 const props = defineProps({
     eventDate: String,
 })
@@ -7,6 +9,7 @@ const props = defineProps({
 <template>
     <header>
         <span class="event-date" id="eventDate">{{ props.eventDate || "10/11 - 30/11" }}</span>
+        <LangSelect />
     </header>
 </template>
 
