@@ -1,6 +1,73 @@
 
+<script setup>
+import LeaderboardListItem from './LeaderboardListItem.vue';
+
+const leaderboardData = [
+    {
+        avatar: "https://shubham-melot.github.io/pk-diwali-event/assets/images/default-avtar.png",
+        username: "UserName",
+        beansAmount: 998,
+        rewardAmount: "10k"
+    },
+    {
+        avatar: "https://shubham-melot.github.io/pk-diwali-event/assets/images/default-avtar.png",
+        username: "UserName",
+        beansAmount: 998,
+        rewardAmount: "10k"
+    },
+    {
+        avatar: "https://shubham-melot.github.io/pk-diwali-event/assets/images/default-avtar.png",
+        username: "UserName",
+        beansAmount: 998,
+        rewardAmount: "10k"
+    },
+    {
+        avatar: "https://shubham-melot.github.io/pk-diwali-event/assets/images/default-avtar.png",
+        username: "UserName",
+        beansAmount: 998,
+        rewardAmount: "10k"
+    },
+    {
+        avatar: "https://shubham-melot.github.io/pk-diwali-event/assets/images/default-avtar.png",
+        username: "UserName",
+        beansAmount: 998,
+        rewardAmount: "10k"
+    },
+    {
+        avatar: "https://shubham-melot.github.io/pk-diwali-event/assets/images/default-avtar.png",
+        username: "UserName",
+        beansAmount: 998,
+        rewardAmount: "10k"
+    },
+    {
+        avatar: "https://shubham-melot.github.io/pk-diwali-event/assets/images/default-avtar.png",
+        username: "UserName",
+        beansAmount: 998,
+        rewardAmount: "10k"
+    },
+    {
+        avatar: "https://shubham-melot.github.io/pk-diwali-event/assets/images/default-avtar.png",
+        username: "UserName",
+        beansAmount: 998,
+        rewardAmount: "10k"
+    },
+    {
+        avatar: "https://shubham-melot.github.io/pk-diwali-event/assets/images/default-avtar.png",
+        username: "UserName",
+        beansAmount: 998,
+        rewardAmount: "10k"
+    },
+    {
+        avatar: "https://shubham-melot.github.io/pk-diwali-event/assets/images/default-avtar.png",
+        username: "UserName",
+        beansAmount: 998,
+        rewardAmount: "10k"
+    },
+]
+</script>
+
 <template>
-    <div class="leaderboard-container">
+    <section class="leaderboard-container">
         <div class="header">
             <img class="left" src="../assets/images/picture_title2.png" alt="arrow" />
             <span class="title">Leaderboard</span>
@@ -14,7 +81,11 @@
             <div>Rebate beans</div>
             <div>Reward</div>
         </div>
-    </div>
+        <div class="table-body">
+            <LeaderboardListItem v-for="(user, index) in leaderboardData" :key="index"
+                v-bind="{ ...user, index: index + 1 }" />
+        </div>
+    </section>
 </template>
 
 <style scoped>
@@ -26,6 +97,7 @@
     width: 100%;
     padding-inline: 16px;
     min-height: 90dvh;
+    padding-bottom: 10px;
 }
 
 .header {
@@ -70,6 +142,12 @@
 
 .table-header div:first-child {
     flex: 0.6;
-    padding-left: 18px;
+    padding-left: 20px;
+}
+
+.table-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 </style>
