@@ -19,7 +19,7 @@ const MIN = 60
 const HOUR = 24
 
 const updateCountdown = () => {
-    const currentDate = new Date().getTime();
+    const currentDate = new Date();
     const timeDifference = eventEndDate - currentDate
 
     if (timeDifference > 0) {
@@ -38,21 +38,23 @@ onMounted(() => updateCountdown())
 <template>
     <div class="event-timer-container">
         <div class="days-container">
-            <span>{{ remaining.days }}</span>
+            <span>{{ remaining.days.toString().padStart(2, '0') }}</span>
             <span>D</span>
         </div>
         <div class="time-container">
-            <span>{{ remaining.hours }}</span>
+            <span>{{ remaining.hours.toString().padStart(2, '0') }}</span>
             :
-            <span>{{ remaining.minutes }}</span>
+            <span>{{ remaining.minutes.toString().padStart(2, '0') }}</span>
             :
-            <span>{{ remaining.seconds }}</span>
+            <span>{{ remaining.seconds.toString().padStart(2, '0') }}</span>
         </div>
+        <img class="chip" src="../assets/images/background_chip.png" alt="chip" role="presentation" />
     </div>
 </template>
 
 <style scoped>
 .event-timer-container {
+    position: relative;
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -81,5 +83,12 @@ span {
     border-radius: 8px;
     width: var(--size);
     height: var(--size);
+}
+
+.chip {
+    position: absolute;
+    left: 14px;
+    max-width: 48px;
+    opacity: 0.5;
 }
 </style>
