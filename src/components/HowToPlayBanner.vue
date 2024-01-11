@@ -4,7 +4,7 @@ const OYETALK_VERSION = "2.8.5"
 </script>
 
 <template>
-    <div class="how-to-play-container">
+    <section class="how-to-play-container">
         <div class="header">
             <img class="left" src="../assets/images/picture_title1.png" alt="arrow" />
             <span class="title">How to play</span>
@@ -16,9 +16,14 @@ const OYETALK_VERSION = "2.8.5"
                 <div class="step-image-container">
                     <img src="../assets/images/how_to_play1.png" alt="Buy" />
                 </div>
-                <div class="step-info">
+                <div lang="en" class="step-info">
                     Purchase <br>
                     Rebate Card
+                </div>
+
+                <div lang="hi" class="step-info">
+                    रिबेट कार्ड <br />
+                    खरीदें
                 </div>
             </div>
             <img class="arrow-next" src="../assets/images/picture_arrow1.png" alt="Next" />
@@ -27,9 +32,14 @@ const OYETALK_VERSION = "2.8.5"
                 <div class="step-image-container">
                     <img src="../assets/images/how_to_play2.png" alt="Buy" />
                 </div>
-                <div class="step-info">
+                <div lang="en" class="step-info">
                     Activate <br>
                     Rebate Card
+                </div>
+
+                <div lang="hi" class="step-info">
+                    रिबेट कार्ड <br />
+                    सक्रिय करें
                 </div>
             </div>
             <img class="arrow-next" src="../assets/images/picture_arrow1.png" alt="Next" />
@@ -38,29 +48,45 @@ const OYETALK_VERSION = "2.8.5"
                 <div class="step-image-container">
                     <img src="../assets/images/how_to_play3.png" alt="Buy" />
                 </div>
-                <div class="step-info">
+                <div lang="en" class="step-info">
                     Start playing <br>
                     Royal Pattern
+                </div>
+
+                <div lang="hi" class="step-info">
+                    रॉयल पैटर्न <br />
+                    खेलना शुरू करें
                 </div>
             </div>
         </div>
 
         <div class="faq">
-            <div class="question">
+            <div lang="en" class="question">
                 What is Rebate cards?
             </div>
-            <div class="answer">
+            <div lang="hi" class="question">
+                रिबेट कार्ड क्या है?
+            </div>
+
+            <div lang="en" class="answer">
                 Exclusively available for OyeTalk Royal Pattern users, the Rebate Card is a premium in-game item. If you
                 don't
                 win a game <span>(by not betting on the winning seat)</span>, using the Rebate Card guarantees a
-                <span>5%</span> bean
-                rebate
-                to reduce your losses.
+                <span>5%</span> bean rebate to reduce your losses.
                 <br>
                 <span>Please update to the latest version {{ OYETALK_VERSION }} of OyeTalk to enjoy this feature.</span>
             </div>
+            <div lang="hi" class="answer">
+                ओएटॉक रॉयल पैटर्न उपयोगकर्ताओं के लिए विशेष रूप से उपलब्ध, रिबेट कार्ड एक प्रीमियम इन-गेम आइटम है। यदि आप
+                कोई गेम नहीं जीतते हैं <span>(जीतने वाली सीट पर दांव न लगाकर)</span>, तो रिबेट कार्ड का उपयोग करने से आपके
+                नुकसान को कम
+                करने के लिए <span>5%</span> सेम छूट की गारंटी मिलती है।
+                <br />
+                कृपया इस सुविधा का आनंद लेने के लिए OyeTalk के नवीनतम संस्करण
+                {{ OYETALK_VERSION }} में अपडेट करें।
+            </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style scoped>
